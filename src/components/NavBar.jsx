@@ -1,38 +1,44 @@
 import { Badge } from "@mui/material"
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { CarritoContext } from "../context/CarritoContext";
 
-export const NavBar = () => {
+export const NavbarPrincipal = () => {
     const { listaCompras } = useContext(CarritoContext)
 
     return (
-        <nav className="navbar navbar-expand-lg bg-secondary ">
-            <div className="container-fluid">
-                <button className="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation"
-                >
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <NavLink to="/" className="navbar-brand"><i className="bi bi-shop fs-2 text-white fw-bolder "></i></NavLink>
+        <Navbar bg="secondary" expand="lg" className="navbar">
 
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <NavLink to="/" className="nav-link active text-white fw-bolder fs-3" aria-current="page">Productos</NavLink>
-                        </li>
-                    </ul>
-                    <NavLink to="/carrito">
+            <Container fluid>
+                <Navbar.Toggle aria-controls="navbar-content" className="border-0" />
 
-                        <Badge badgeContent={listaCompras.length} color="error">
-                            <ShoppingCartIcon className="icon-white" />
-                        </Badge>
+                <NavLink to="/" className="navbar-brand">
+                    <i className="bi bi-shop fs-2 text-white fw-bolder"></i>
+                </NavLink>
 
-                    </NavLink>
+                <Navbar.Collapse id="navbar-content">
 
-                </div>
-            </div>
-        </nav>
+                    <Nav className="me-auto mb-2 mb-lg-0">
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) => `nav-link text-white fw-bolder fs-3 ${isActive ? 'active' : ''}`}>
+                            Productos
+                        </NavLink>
+                    </Nav>
+
+                    <Nav>
+                        <NavLink to="/carrito" className="nav-link">
+                            <Badge badgeContent={listaCompras.length} color="error">
+                                <ShoppingCartIcon className="icon-white" />
+                            </Badge>
+                        </NavLink>
+                    </Nav>
+
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
+
     )
 }

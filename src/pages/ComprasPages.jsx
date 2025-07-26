@@ -1,7 +1,8 @@
 
 import { useContext } from "react"
-import { Card } from "../components/Card"
+import { ProductoCard } from "../components/Card"
 import { ProductosContext } from "../context/ProductosContext"
+import { Spinner, Alert } from 'react-bootstrap';
 
 export const ComprasPages = () => {
 
@@ -9,13 +10,12 @@ export const ComprasPages = () => {
 
     if (loading) {
         return <div className="d-flex justify-content-center">
-            <div className="spinner-border" role="status">
-                <span className="visually-hidden">Loading...</span>
-            </div>
+            <Spinner animation="border" variant="darck" />
         </div>
+
     }
     if (error) {
-        return <div class="alert alert-danger" role="alert">{error}</div>
+        return <Alert variant="danger">{error}</Alert>
     }
     return (
         <>
@@ -24,7 +24,7 @@ export const ComprasPages = () => {
                 {
                     productos.map(producto => {
                         return (
-                            <Card key={producto.id}
+                            <ProductoCard key={producto.id}
                                 imagen={producto.images}
                                 titulo={producto.title}
                                 precio={producto.price}

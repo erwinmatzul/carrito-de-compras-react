@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom"
-import { NavBar } from "./components/NavBar"
+import { NavbarPrincipal } from "./components/NavBar"
 import { ComprasPages } from "./pages/ComprasPages"
 import { CarritoPages } from "./pages/CarritoPages"
 import { ProductosProvider } from "./context/ProductosProvider"
@@ -10,7 +10,7 @@ export const CarritoApp = () => {
     <ProductosProvider>
       <CarritoProvider>
 
-        <NavBar></NavBar>
+        <NavbarPrincipal></NavbarPrincipal>
 
         <div className="container">
           <Routes>

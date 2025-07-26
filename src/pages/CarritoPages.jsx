@@ -5,6 +5,7 @@ import { TableBody } from "../components/TableBody"
 import { TableHeader } from "../components/TableHeader"
 import { TableFooter } from "../components/TableFooter"
 import { BtnComprar } from "../components/BtnComprar"
+import Table from 'react-bootstrap/Table';
 
 export const CarritoPages = () => {
 
@@ -13,7 +14,7 @@ export const CarritoPages = () => {
     return (
         <>
             <div className="table-responsive">
-                <table className="table mt-3">
+                <Table className="table mt-3">
 
                     <TableHeader />
 
@@ -33,7 +34,7 @@ export const CarritoPages = () => {
                         }
                     </tbody>
                     <TableFooter />
-                </table>
+                </Table>
                 <BtnComprar />
             </div>
         </>

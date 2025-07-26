@@ -25,7 +25,7 @@ export const TableBody = ({ title, price, images, id, cantidad, listaCompras }) 
                 type="button"
                 className="btn btn-outline"
                 onClick={() => { eliminarCompra(id) }}
-                disabled={listaCompras < 1} ><i class="bi bi-trash3 text-danger fs-5"></i></button></td>
+                disabled={listaCompras < 1} ><i className="bi bi-trash3 text-danger fs-5"></i></button></td>
         </tr>
     )
 }

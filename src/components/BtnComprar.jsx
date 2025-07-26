@@ -1,4 +1,4 @@
-
+import Button from 'react-bootstrap/Button';
 import { useContext } from "react"
 import { CarritoContext } from "../context/CarritoContext"
 
@@ -12,11 +12,12 @@ export const BtnComprar = () => {
     }
     return (
         <div className="btn-comprar">
-            <button className="btn-comprarProd"
+            <Button className="btn-comprarProd"
                 onClick={imprimir}
                 disabled={listaCompras == 0}>
                 <i className="bi bi-bag-fill">
-                </i> Comprar</button>
+                </i> Comprar</Button>
+
         </div>
 
     )

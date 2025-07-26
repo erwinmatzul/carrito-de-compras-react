@@ -59,7 +59,8 @@ export const CarritoProvider = ({ children }) => {
       payload: compra,
     }
     dispatch(action)
-  }
+  } 
+
   const aumentarCantidad = (id) => {
 
     const action = {
