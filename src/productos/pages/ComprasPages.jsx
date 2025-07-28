@@ -1,6 +1,6 @@
 
 import { useContext } from "react"
-import { ProductoCard } from "../components/Card"
+import { ProductoCard } from "../../favoritos/components/Card"
 import { ProductosContext } from "../context/ProductosContext"
 import { Spinner, Alert } from 'react-bootstrap';
 
@@ -19,7 +19,7 @@ export const ComprasPages = () => {
     }
     return (
         <>
-            <h1 className="titleCompras">Compras</h1>
+            <h1 className="titleCompras text-center">Compras</h1>
             <div className="cardContainer">
                 {
                     productos.map(producto => {

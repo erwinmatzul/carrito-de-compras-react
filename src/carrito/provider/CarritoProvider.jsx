@@ -1,6 +1,6 @@
 import { useReducer } from "react"
-import { CarritoContext } from "./CarritoContext"
-import { TYPES } from "./types"
+import { CarritoContext } from "../context/CarritoContext"
+import { TYPES } from "../../productos/utils/types"
 
 const initialState = []
 

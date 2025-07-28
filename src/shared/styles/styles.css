@@ -108,6 +108,7 @@
    align-items: center;
    margin-top: 2rem;
  }
+
  .btn-comprar {
    display: flex;
    justify-content: center;
@@ -126,15 +127,61 @@
    cursor: pointer;
  }
 
- .titleCompras {
+ .titleCompras,
+ .titleFavotios {
    color: #575253;
    margin-top: 1rem;
  }
 
- .table-color th{
-  background-color:#9083e9;
-  color: white;
-}
+ .table-color th {
+   background-color: #9083e9;
+   color: white;
+ }
+
+ .containerFav {
+   width: 2.5rem;
+   height: 2.5rem;
+   border-radius: 3rem;
+   position: absolute;
+   top: 8px;
+   left: 14.2rem;
+   box-shadow: 2px 2px 5px rgba(12, 12, 12, 0.5);
+   background-color: #DADADA59;
+
+ }
+
+ .favoritesStyles,
+ .empty-heart {
+   position: absolute;
+   left: 11px;
+   top: 8px;
+   font-size: 18px;
+   border-radius: 16px;
+   cursor: pointer;
+ }
+
+ .continerFavorito,
+ .continerCarrito {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 700px;
+ }
+
+ .messageFavorito {
+   position: absolute;
+   top: 40px;
+   left: -4rem;
+   z-index: 10;
+   font-size: 0.7rem;
+   margin-top: 0.25rem;
+   background-color: #f8f9fa;
+   color: #212529;
+   padding: 0.25rem 0.5rem;
+   border-radius: 0.3rem;
+   white-space: nowrap;
+ }
+
  @media(max-width: 576px) {
    .cardContainer {
      display: grid;

@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react"
-import { ProductosContext } from "./ProductosContext"
+import { ProductosContext } from "../context/ProductosContext"
 
 export const ProductosProvider = ({ children }) => {
 

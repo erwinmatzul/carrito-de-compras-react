@@ -13,11 +13,15 @@ export const CarritoPages = () => {
 
     return (
         <>
+
+        {
+            listaCompras.length >= 1 ? (
+                 
+
             <div className="table-responsive">
                 <Table className="table mt-3">
 
                     <TableHeader />
-
                     <tbody>
                         {
                             listaCompras.map(prod => {
@@ -37,6 +41,12 @@ export const CarritoPages = () => {
                 </Table>
                 <BtnComprar />
             </div>
+            ):(
+          <div className="continerCarrito">
+            <h2 className="text-muted">¡Tu carrito está vacío! Agrega productos para comenzar.</h2>
+          </div>
+        )
+        }
         </>
     )
 }

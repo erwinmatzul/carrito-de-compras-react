@@ -1,25 +1,30 @@
 import { Navigate, Route, Routes } from "react-router-dom"
-import { NavbarPrincipal } from "./components/NavBar"
-import { ComprasPages } from "./pages/ComprasPages"
-import { CarritoPages } from "./pages/CarritoPages"
-import { ProductosProvider } from "./context/ProductosProvider"
-import { CarritoProvider } from "./context/CarritoProvider"
+import { NavbarPrincipal } from "./shared/components/NavBar"
+import { ComprasPages } from "./productos/pages/ComprasPages"
+import { CarritoPages } from "./carrito/pages/CarritoPages"
+import { ProductosProvider } from "./productos/provider/ProductosProvider"
+import { CarritoProvider } from "./carrito/provider/CarritoProvider"
+import { FavoritosProvider } from "./favoritos/provider/FavoritosProvider"
+import { FavoritoPages } from "./favoritos/pages/FavoritoPages"
 
 export const CarritoApp = () => {
   return (
     <ProductosProvider>
       <CarritoProvider>
+        <FavoritosProvider>
 
-        <NavbarPrincipal></NavbarPrincipal>
+          <NavbarPrincipal></NavbarPrincipal>
 
-        <div className="container">
-          <Routes>
-            <Route path="/" element={<ComprasPages to="/"></ ComprasPages>}></Route>
-            <Route path="/carrito" element={<CarritoPages></CarritoPages>}></Route>
-            <Route path="/*" element={<Navigate to="/"></ Navigate>}></Route>
-          </Routes>
+          <div className="container">
+            <Routes>
+              <Route path="/" element={<ComprasPages to="/" />}></Route>
+              <Route path="/carrito" element={<CarritoPages />}></Route>
+              <Route path="/favoritos" element={<FavoritoPages />}></Route>
+              <Route path="/*" element={<Navigate to="/" />}></Route>
+            </Routes>
 
-        </div>
+          </div>
+        </FavoritosProvider>
       </CarritoProvider>
     </ProductosProvider>
   )
