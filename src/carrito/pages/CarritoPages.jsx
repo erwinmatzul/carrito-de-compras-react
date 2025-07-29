@@ -14,39 +14,40 @@ export const CarritoPages = () => {
     return (
         <>
 
-        {
-            listaCompras.length >= 1 ? (
-                 
+            {
+                listaCompras.length >= 1 ? (
 
-            <div className="table-responsive">
-                <Table className="table mt-3">
 
-                    <TableHeader />
-                    <tbody>
-                        {
-                            listaCompras.map(prod => {
+                    <div className="table-responsive">
+                        <Table className="table mt-3">
 
-                                return (
-                                    <TableBody key={prod.id}
-                                        title={prod.title}
-                                        price={prod.price}
-                                        images={prod.images}
-                                        id={prod.id}
-                                        cantidad={prod.cantidad} />
-                                )
-                            })
-                        }
-                    </tbody>
-                    <TableFooter />
-                </Table>
-                <BtnComprar />
-            </div>
-            ):(
-          <div className="continerCarrito">
-            <h2 className="text-muted">¡Tu carrito está vacío! Agrega productos para comenzar.</h2>
-          </div>
-        )
-        }
+                            <TableHeader />
+                            <tbody>
+                                {
+                                    listaCompras.map(prod => {
+
+                                        return (
+                                            <TableBody key={prod.id}
+                                                title={prod.title}
+                                                price={prod.price}
+                                                images={prod.images}
+                                                id={prod.id}
+                                                cantidad={prod.cantidad} />
+                                        )
+                                    })
+                                }
+                            </tbody>
+                            <TableFooter />
+                        </Table>
+                        <BtnComprar />
+                    </div>
+                ) : (
+                    <div className="containerCarrito">
+                        <img src="src/carrito/img/empty_cart.svg" alt="cart" className="imgVacio" />
+                        <h2 className="text-muted">¡Tu carrito está vacío! Agrega productos para comenzar.</h2>
+                    </div>
+                )
+            }
         </>
     )
 }

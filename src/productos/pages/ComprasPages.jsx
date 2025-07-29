@@ -17,6 +17,7 @@ export const ComprasPages = () => {
     if (error) {
         return <Alert variant="danger">{error}</Alert>
     }
+
     return (
         <>
             <h1 className="titleCompras text-center">Compras</h1>
