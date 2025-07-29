@@ -10,15 +10,14 @@ export const NavbarPrincipal = () => {
     const { listaCompras } = useContext(CarritoContext)
     const { listaFavoritos } = useContext(FavoritosContext)
 
-
     return (
-        <Navbar bg="secondary" expand="lg" className="navbar">
+        <Navbar expand="lg" className="navbar">
 
             <Container fluid>
                 <Navbar.Toggle aria-controls="navbar-content" className="border-0" />
 
-                <NavLink to="/" className="navbar-brand">
-                    <i className="bi bi-shop fs-2 text-white fw-bolder"></i>
+                <NavLink to="/" className="navbar-brand d-flex">
+                <img src="/src/shared/img/logo.png" alt="logo" className="w-50 ms-auto"/>
                 </NavLink>
 
                 <Navbar.Collapse id="navbar-content">
@@ -42,7 +41,7 @@ export const NavbarPrincipal = () => {
 
                         <NavLink to="/carrito" className="nav-link">
                             <Badge badgeContent={listaCompras.length} color="error">
-                                <ShoppingCartIcon className="icon-white" />
+                                <ShoppingCartIcon className="icon-white"/>
                             </Badge>
                         </NavLink>
                     </Nav>

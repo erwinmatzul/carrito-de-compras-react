@@ -6,7 +6,7 @@
  }
 
  body {
-   background: #f2f4f7;
+   background: #FFFFFF;
    height: 100vh;
  }
 
@@ -15,6 +15,7 @@
    border-radius: 12px;
    overflow: hidden;
    width: 280px;
+   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
    margin-top: 1.5rem;
  }
 
@@ -34,7 +35,7 @@
  .card-titulo {
    font-size: 1.1rem;
    font-weight: 600;
-   color: #333;
+   color: #1E1F2E;
    margin-bottom: 8px;
  }
 
@@ -47,7 +48,7 @@
  .card-precio {
    font-size: 1rem;
    font-weight: bold;
-   color: #0f9d58;
+   color: #BC2848;
    margin-bottom: 12px;
  }
 
@@ -63,7 +64,7 @@
  }
 
  .card-btn-agregar {
-   background: #0f9d58;
+   background: #FBCD14;
    color: #fff;
  }
 
@@ -73,7 +74,7 @@
  }
 
  .card-btn-agregar:hover {
-   background: #0c7c45;
+   background: #f1c206;
  }
 
  .card-btn-quitar:hover {
@@ -86,6 +87,10 @@
  .eliminabtn,
  .containerBtn {
    vertical-align: middle !important;
+ }
+
+ .navbar {
+   background-color: #FA5C44;
  }
 
  .navbar .nav-link {
@@ -116,7 +121,7 @@
 
 
  .btn-comprarProd {
-   background: #6A5ACD !important;
+   background: #FBCD14 !important;
    color: white;
    padding: 0.75em 2em;
    font-size: 1rem;
@@ -134,7 +139,7 @@
  }
 
  .table-color th {
-   background-color: #9083e9;
+   background-color: #C64136;
    color: white;
  }
 
@@ -266,6 +271,22 @@
    color: #212529;
  }
 
+ .containerForm {
+   display: flex;
+ }
+
+ .containerForm>input {
+   margin-left: auto;
+   width: 17rem;
+   margin-right: 1rem;
+   border-radius: 10px;
+ }
+
+ .input:focus {
+   border-color: #FA5C44;
+   outline: none;
+   box-shadow: none;
+ }
 
  @media(max-width: 576px) {
    .cardContainer {
@@ -273,6 +294,10 @@
      grid-template-columns: 1fr;
      gap: 10px;
      justify-items: center;
+   }
+   .containerForm>input{
+    display: flex;
+    margin: auto;
    }
 
    .container-fluid {

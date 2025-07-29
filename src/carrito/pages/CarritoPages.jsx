@@ -44,7 +44,7 @@ export const CarritoPages = () => {
                 ) : (
                     <div className="containerCarrito">
                         <img src="src/carrito/img/empty_cart.svg" alt="cart" className="imgVacio" />
-                        <h2 className="text-muted">¡Tu carrito está vacío! Agrega productos para comenzar.</h2>
+                        <h2 className="text-muted text-center">¡Tu carrito está vacío! Agrega productos para comenzar.</h2>
                     </div>
                 )
             }
